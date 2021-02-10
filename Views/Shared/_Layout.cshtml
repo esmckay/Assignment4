@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Top 5 Restaurants</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <menu>
+            <a asp-action="Index">Home</a>
+            <a asp-action="Suggestions">Make a Suggestion</a>
+            <a asp-action="SuggList">See current suggestions</a>
+        </menu>
+    </div>
+    <div class="text-center">
+        <h1>@ViewBag.Title</h1>
+    </div>
+        
+   
+
+    @RenderBody()
+<div class="text-center">
+    <footer class="text-center">Elijah McKay Inc.</footer>
+</div>
+   
+   
+</body>
+</html>
