@@ -1,5 +1,6 @@
-﻿@{
-    ViewBag.Title = "Top 5 Restaurants";
+﻿@*This is my welcome page that shows my top 5 restaurants*@
+@{
+    ViewBag.Title = "Welcome";
 }
 
 @model IEnumerable<string>
@@ -7,6 +8,7 @@
 
 <body>
     <div class="text-center">
+        <h4>Top 5 Restaurants</h4>
         <ul class="list-group">
             @foreach (string i in Model)
             {

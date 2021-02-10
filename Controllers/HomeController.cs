@@ -18,6 +18,8 @@ namespace Assignment4.Controllers
             _logger = logger;
         }
 
+
+        //Welcome page that lists out all of the restaurants that we want.
         public IActionResult Index()
         {
             List<string> restList = new List<string>();
@@ -36,18 +38,29 @@ namespace Assignment4.Controllers
             return View(restList);
         }
 
+        //Get method for suggestions page
         [HttpGet]
         public IActionResult Suggestions()
         {
             return View();
         }
 
+        //Post method that makes sure that the page follows the rules we set out in the model
         [HttpPost]
         public IActionResult Suggestions(SuggestionResponse suggResponse)
         {
-            Storage.AddSuggestion(suggResponse);
+            if (ModelState.IsValid)
+            {
+                Storage.AddSuggestion(suggResponse);
 
-            return View("Confirmation", suggResponse);
+                return View("Confirmation", suggResponse);
+            }
+            else
+            {
+                return View();
+            }
+            
+            
         }
 
         public IActionResult SuggList()

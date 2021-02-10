@@ -8,8 +8,13 @@ namespace Assignment4.Models
 {
     public class Restaurant
     {
+        public Restaurant(int rank)
+        {
+            RestRanking = rank;
+        }
+
         [Required]
-        public int RestRanking { get; set; }
+        public int RestRanking { get; }
         [Required]
         public string RestName { get; set; }
         public string? FavDish { get; set; }
@@ -21,9 +26,8 @@ namespace Assignment4.Models
 
         public static Restaurant[] GetRestaurants()
         {
-            Restaurant r1 = new Restaurant()
+            Restaurant r1 = new Restaurant(1)
             {
-                RestRanking = 1,
                 RestName = "Tepanyaki's",
                 FavDish = "Filet Mignon with Noodles",
                 RestAddress = " 72 N 850 E, Lehi, UT 84043",
@@ -32,9 +36,8 @@ namespace Assignment4.Models
 
             };
 
-            Restaurant r2 = new Restaurant()
+            Restaurant r2 = new Restaurant(2)
             {
-                RestRanking = 2,
                 RestName = "The Mandarin",
                 FavDish = "Beef and Brocoli with Noodles",
                 RestAddress = "348 900 N, Bountiful, UT 84010",
@@ -42,9 +45,8 @@ namespace Assignment4.Models
                 RestWebsite = "https://mandarinutah.com/"
             };
 
-            Restaurant r3 = new Restaurant()
+            Restaurant r3 = new Restaurant(3)
             {
-                RestRanking = 3,
                 RestName = "In-N-Out Burger",
                 FavDish = "Double Double Combo",
                 RestAddress = "350 E University Pkwy, Orem, UT 84058",
@@ -52,9 +54,8 @@ namespace Assignment4.Models
                 RestWebsite = "https://www.in-n-out.com/menu"
             };
 
-            Restaurant r4 = new Restaurant()
+            Restaurant r4 = new Restaurant(4)
             {
-                RestRanking = 4,
                 RestName = "Wendy's",
                 FavDish = "4 for $4",
                 RestAddress = "1066 S. University Ave, Provo, UT 84601",
@@ -62,9 +63,8 @@ namespace Assignment4.Models
                 RestWebsite = "https://locations.wendys.com/united-states/ut/provo/1066-s.-university-ave."
             };
 
-            Restaurant r5 = new Restaurant()
+            Restaurant r5 = new Restaurant(5)
             {
-                RestRanking = 5,
                 RestName = "Zao's",
                 FavDish = "Fried Chicken and Noodles",
                 RestAddress = "1352 State St, Orem, UT 84097",
