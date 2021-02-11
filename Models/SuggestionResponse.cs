@@ -12,7 +12,7 @@ namespace Assignment4.Models
         public string suggRest { get; set; }
         public string suggDish { get; set; }
 
-        [RegularExpression(@"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}", ErrorMessage ="Invalid Phone Number")]
+        [RegularExpression(@"^\d{3}-\d{3}-\d{4}$", ErrorMessage ="Invalid Phone Number")]
         public string suggPhone { get; set; }
     }
 }

@@ -11,20 +11,26 @@
     <form asp-action="Suggestions" method="post">
         <div>
             <label asp-for="suggName">Name:</label>
-            <input asp-for="suggName"/>
+            <input asp-for="suggName" />
         </div>
         <div>
             <label asp-for="suggRest">Restaurant Name:</label>
-            <input asp-for="suggRest"/>
+            <input asp-for="suggRest" />
         </div>
         <div>
             <label asp-for="suggDish">Favorite Dish:</label>
-            <input asp-for="suggDish"/>
+            <input asp-for="suggDish" />
         </div>
         <div>
             <label asp-for="suggPhone">Restuarant Phone Number:</label>
-            <input asp-for="suggPhone"/>
+            <input asp-for="suggPhone" />
+            <br />
+            <p>Phone number format: ###-###-#### (Include dahses)</p>
         </div>
+        
         <button type="submit">Submit your Suggestion</button>
+
+
+
     </form>
 </div>
